@@ -71,7 +71,7 @@
                         
                         <!-- ----------MUESTRO TODO ACA ------------------- -->
                         
-                        <!-- SETTINGS APP -->
+                                   <!-- SETTINGS APP -->
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="well">SETTINGS DE APLICACI&Oacute;N</div>
@@ -344,9 +344,14 @@
                             </div>
                         </form>
                             </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                <div class="col-md-4 col-md-offset-1 btn btn-default pull-right"><span class="glyphicon glyphicon-ok-circle">ACEPTAR</span></div>
+                                <div class="col-md-4 btn btn-default pull-right"><span class="glyphicon glyphicon-remove-circle">CANCELAR</span></div>
+                                </div>
                             </div>
-
-                        <!-- FIN SETTINGS APP -->
+                            </div>
+           <!-- FIN SETTIGS APP -->
                         
                         <!-- SETTINGS ALMACEN -->
                         <div class="container-fluid">
@@ -373,6 +378,12 @@
                                     </div>
                                 </form>
                             </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                <div class="col-md-4 col-md-offset-1 btn btn-default pull-right"><span class="glyphicon glyphicon-ok-circle">ACEPTAR</span></div>
+                                <div class="col-md-4 btn btn-default pull-right"><span class="glyphicon glyphicon-remove-circle">CANCELAR</span></div>
+                                </div>
+                            </div>
                             </div>                        
                         <!-- FIN SETTINGS ALMACEN -->
                         
@@ -380,7 +391,61 @@
                         
                         <!-- FIN ABM BANDEJA -->
                         <!-- -->
-                        
+                        <!-- CARGA DE GUIA -->
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="well">CARGA SIMPLE DE GU&Iacute;A</div>
+                            </div>
+                            <div class="row">
+                        <form role="form">
+                            <div class="form-group col-md-8">
+                                <label for="guiabarcode">C&oacute;digo de barras</label>
+                                <input class="form-control" type="text" name="barcode">
+                                <label for="guiadesc">Descripci&oacute;n</label>
+                                <input class="form-control" type="text" name="guiadesc">
+                                <label for="guiaancho">Ancho de gu&iacute;a</label>
+                                <input class="form-control" type="text">
+                                <label for="guiaprof">Profundidad de gu&iacute;a</label>
+                                <input class="form-control" type="text">
+                                <label for="guiaaltura">Altura de gu&iacute;a</label>
+                                <input class="form-control" type="text">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                <div class="col-md-4 col-md-offset-1 btn btn-default pull-right"><span class="glyphicon glyphicon-ok-circle">ACEPTAR</span></div>
+                                <div class="col-md-4 btn btn-default pull-right"><span class="glyphicon glyphicon-remove-circle">CANCELAR</span></div>
+                                </div>
+                            </div>
+                            </div>                        
+                        <!-- FIN CARGA DE GUIA -->
+                        <!-- PICKING -->
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="well">PICKING</div>
+                            </div>
+                            <div class="row">
+                                <form role="form">
+                                    <div class="form-group col-md-8">
+                                        <label for="guiabarcode">C&oacute;digo de barras de la gu&iacute;a</label>
+                                        <input class="form-control" type="text" name="barcode">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-xs-12">
+                                    <div class="btn btn-info">AGREGAR NUEVA LÍNEA DE PICKING</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                <div class="col-md-4 col-md-offset-1 btn btn-default pull-right"><span class="glyphicon glyphicon-ok-circle">ACEPTAR</span></div>
+                                <div class="col-md-4 btn btn-default pull-right"><span class="glyphicon glyphicon-remove-circle">CANCELAR</span></div>
+                                </div>
+                            </div>
+                            </div>                        
+                        <!-- PICKING -->
                         
                     </div>
                     <!-- FIN DIV DE CARGA DE APPS POR AJAX -->
