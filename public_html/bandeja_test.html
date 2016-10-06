@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+    Es la landing page del usuario que hace login exitosamente.
+    Contiene el menu, la status bar y un newsfeed.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>MENU</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Dosis|Poiret+One" rel="stylesheet">
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
-        <div>TODO write content</div>
+        
+        <!-- Plantillas ofrecidas -->
+        <div class="container">
+            <div class="row">
+                <div class="well well-sm"><h1>ABM BANDEJA</h1></div>
+            </div>
+            <div class="row">
+                <button class="btn btn-default" data-toggle="tooltip" title="Listado de bandejas">CONSULTAR BANDEJAS</button>
+                <button class="btn btn-default">SELECCIONAR BANDEJA</button>
+            </div>
+            <br>
+            <div class="row">
+                <div  class="panel panel-info"><h2>PLANTILLAS</h2></div>
+                <div>Esta parte se muestra al seleccionar una bandeja.<br>Plantillas aqu&iacute;. Sin divisiones, a la mitad, en 4, etc...</div>
+            </div>
+            <div class="row">
+                <div  class="panel panel-info"><h2>AJUSTE MANUAL</h2></div>
+                <div class="bandeja"></div>
+            </div>
+        </div>    
+        <script src="js/vendor/jquery-1.11.2.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
     </body>
 </html>
