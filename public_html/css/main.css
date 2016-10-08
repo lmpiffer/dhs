@@ -24,3 +24,11 @@
     background-size: cover;
     background: url("../img/bg1.jpg") no-repeat fixed center;
 }
+
+.bandeja{
+    position: relative;
+    height: 230px;
+    width: 100%;
+    background-color: #c9e2b3;
+    border: solid 2px #3e8f3e;
+}
