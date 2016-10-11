@@ -22,7 +22,7 @@
                 <div class="well well-sm"><h1>BANDEJAS</h1></div>
             </div>
             <div class="row">
-                <button class="btn btn-default" data-toggle="tooltip" title="Listado de bandejas">CONSULTAR BANDEJAS</button>
+                <button class="btn btn-default" data-toggle="tooltip" title="Modal con listado de bandejas">CONSULTAR BANDEJAS</button>
                 <button class="btn btn-default">SELECCIONAR BANDEJA</button>
             </div>
             <br>
@@ -49,5 +49,13 @@
         </div>    
         <script src="js/vendor/jquery-1.11.2.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function(){
+               // Inicializo los tooltips
+               $(function () { 
+                   $('[data-toggle="tooltip"]').tooltip();
+               }); 
+            });
+        </script>
     </body>
 </html>
