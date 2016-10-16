@@ -16,37 +16,39 @@
     </head>
     <body>
         
-        <!-- Plantillas ofrecidas -->
         <div class="container">
             <div class="row">
                 <div class="well well-sm"><h1>BANDEJAS</h1></div>
             </div>
             <div class="row">
                 <button class="btn btn-default" data-toggle="tooltip" title="Modal con listado de bandejas">CONSULTAR BANDEJAS</button>
-                <button class="btn btn-default">SELECCIONAR BANDEJA</button>
+                <button id="selectBandeja" class="btn btn-default">SELECCIONAR BANDEJA</button>
             </div>
-            <br>
-            <div class="row">
-                <div  class="panel panel-info"><h4>PLANTILLAS</h4></div>
-                <div>Esta parte se muestra al seleccionar una bandeja.<br>Plantillas aqu&iacute;. Sin divisiones, a la mitad, en 4, etc...</div>
+            <div class="row bandejaEditor">
+                <div class="bandejaElegida"></div>
+                <div class="bandejaViewport"></div>
             </div>
-            <div class="row">
-                <div  class="panel panel-info"><h4>AJUSTE MANUAL: BANDEJA 4</h4></div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="row">
-                            <div>Añadir nueva division (cm)</div>
-                            <input class="input-sm"><button>OK</button>
-                            <div>Añadir Ubicacion</div>
-                            <input class="input-sm"><button>OK</button>
-                        </div>
+        </div>
+        
+        <!-- MODAL -->
+        <div class="modal fade" id="modalBandejas">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                        <h4 class="modal-title" id="myModalLabel"></h4>
                     </div>
-                    <div class="col-md-8">
-                        <div class="bandeja"></div>
+                    <div class="modal-body" id="modalPrincipal">
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
             </div>
-        </div>    
+        </div>
+        <!-- FIN MODAL -->
+        
         <script src="js/vendor/jquery-1.11.2.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script>
@@ -56,6 +58,46 @@
                    $('[data-toggle="tooltip"]').tooltip();
                }); 
             });
+            
+            function getListadoBandejas(){
+                // La profundidad, largo, etc son datos que los traigo una vez solamente, aca los listo muchas veces porque no tengo contenido dinamico
+                var contenido = '<div class="bandejaDet" data-id="1"><a href"#">Bandeja 1</a></div>';
+                contenido += '<div class="bandejaDet" data-id="2"><a href"#">Bandeja 2</a></div>';
+                contenido += '<div class="bandejaDet" data-id="3"><a href"#">Bandeja 3</a></div>';
+                $("#modalPrincipal").append(contenido);
+            };
+            
+            function armoBandeja(idElegida){
+                // Armar AJAX para traer datos de la bandeja elegida. Para la logica, pongo los datos a mano
+                // Traigo las ubicaciones tambien, cada ubicacion tendra un ID, ancho y prof
+                var ancho = 240;
+                var prof = 60;
+                // Armo una relacion visual entre el tamaño de la bandeja y los pixeles posibles
+                ancho = 4*ancho;
+                prof = 4*prof;
+                
+                        
+            };
+            
+            $("#selectBandeja").click(function(){
+                $("#modalPrincipal").html("");
+                $("#modalBandejas").modal({
+                    keyboard: false
+                });
+                // Consulto el listado de bandejas por ajax
+                var listado = getListadoBandejas();
+                
+            });
+            
+            // Seleccion de la bandeja
+            $('#modalPrincipal').on('click','.bandejaDet', function(){
+                var bandejaElegida = $(this).data("id");
+                $(".bandejaElegida").html("Bandeja "+bandejaElegida);
+                //Cierro el modal
+                $("#modalBandejas").modal('toggle');
+                armoBandeja(bandejaElegida);
+            });
+            
         </script>
     </body>
 </html>
